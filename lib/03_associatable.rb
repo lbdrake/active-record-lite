@@ -45,40 +45,36 @@ end
 
 module Associatable
   def belongs_to(name, options = {})
-    options = BelongsToOptions.new(name, options)
+    self.assoc_options[name] = BelongsToOptions.new(name, options)
 
     define_method(name) do
-      object = DBConnection.execute(<<-SQL, self.send(options.foreign_key))
-        SELECT
-          *
-        FROM
-          #{options.table_name}
-        WHERE
-          id = ?;
-      SQL
+      options = self.class.assoc_options[name]
 
-      return nil if object == []
-      options.model_class.new(object.first)
-
+      key_val = self.send(options.foreign_key)
+      options
+        .model_class
+        .where(options.primary_key => key_val)
+        .first
     end
   end
 
   def has_many(name, options = {})
-    options = HasManyOptions.new(name, self.class.to_s, options)
+    self.assoc_options[name] =
+    HasManyOptions.new(name, self.name, options)
 
     define_method(name) do
-      return nil if objects == []
+      options = self.class.assoc_options[name]
 
-      answer = objects.map do |object|
-        options.model_class.new(object)
-      end
-
-      answer
+      key_val = self.send(options.primary_key)
+      options
+        .model_class
+        .where(options.foreign_key => key_val)
     end
   end
 
   def assoc_options
-    # Wait to implement this. Modify `belongs_to`, too.
+    @assoc_options ||= {}
+    @assoc_options
   end
 end
 
