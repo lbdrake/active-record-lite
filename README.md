@@ -1,10 +1,10 @@
 ![DataRetriever Logo](DataRetriever-logo.png)
-# DataRetriever ORM
-### inspired by Active Record
 
-##About
-* ORM facilitates SQL queries from Ruby environment
-* Includes RSpec tests integrated with SQL's 'world' database
+#DataRetriever ORM
+* Inspired by Active Record Query Interface
+* Facilitates SQL queries from Ruby environment
+* 
+* Includes RSpec tests integrated with 3rd party MySQL 'world' database
 
 ##How to Run These Files
 * Using Ruby
