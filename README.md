@@ -2,8 +2,9 @@
 
 #DataRetriever ORM
 * Inspired by Active Record Query Interface
-* Facilitates SQL queries from Ruby environment
-* Includes RSpec tests integrated with 3rd party MySQL 'world' database
+* Facilitates SQL queries in Ruby environment
+* Includes RSpec tests for main features
+* Test database is MySQL 'world.sql' database lovingly translated to SQLite3 syntax
 
 ##How to Run These Files
 * Using Ruby
