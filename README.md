@@ -1,13 +1,14 @@
 ![DataRetriever Logo](DataRetriever-logo.png)
 
 #DataRetriever ORM
-* Inspired by Active Record Query Interface
 * Facilitates SQL queries in Ruby environment
-* Includes RSpec tests for main features
-* Test database is MySQL 'world.sql' database lovingly translated to SQLite3 syntax
+* Integrates 'activesupport' gem for database connection
+* RSpec tests for main features
+  * Test database lovingly translated from 3rd party MySQL file to SQLite3 syntax
 
 ##How to Run These Files
 * Using Ruby
+* Bundle Install Gems
 * Opening program
 
 ##How to Run RSpec Tests
