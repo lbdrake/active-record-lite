@@ -1,0 +1,6 @@
+require_relative 'db_connection'
+require_relative 'sql_object.rb'
+require_relative 'associatable.rb'
+require_relative 'associatable2.rb'
+require_relative 'searchable'
+require 'active_support/inflector'

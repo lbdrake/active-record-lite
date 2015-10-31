@@ -13,7 +13,7 @@ CREATE TABLE humans (
   house_id INTEGER,
 
   FOREIGN KEY(house_id) REFERENCES human(id)
-);
+); 
 
 CREATE TABLE houses (
   id INTEGER PRIMARY KEY,

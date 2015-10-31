@@ -1,5 +1,5 @@
-require_relative '02_searchable'
-require 'active_support/inflector'
+require_relative 'file_list'
+
 
 class AssocOptions
   attr_accessor(

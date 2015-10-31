@@ -1,4 +1,4 @@
-require '02_searchable'
+require 'file_list'
 
 describe 'Searchable' do
   before(:each) { DBConnection.reset }
