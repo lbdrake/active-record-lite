@@ -2,16 +2,15 @@
 
 #DataRetriever ORM
 * Facilitates SQL queries in Ruby environment
-* Integrates 'activesupport' gem for database connection
+* Integrates 'activesupport' gem for 'sqlite3' database connection
 * RSpec tests for main features
-  * Test database lovingly translated from 3rd party MySQL file to SQLite3 syntax
+  * Test database lovingly translated and adapted from open source MySQL file to SQLite3 syntax
 
 ##How to Run These Files
 * Using Ruby
 * Bundle Install Gems
   * Use 'cd' command to navigate to the project folder
   * Run command 'bundle install' to install gems
-  * 
 * Opening program
 
 ##How to Run RSpec Tests
