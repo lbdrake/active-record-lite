@@ -1,6 +1,5 @@
 require_relative 'file_list'
 
-
 class AssocOptions
   attr_accessor(
     :foreign_key,

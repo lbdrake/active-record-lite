@@ -9,9 +9,13 @@
 ##How to Run These Files
 * Using Ruby
 * Bundle Install Gems
+  * Use 'cd' command to navigate to the project folder
+  * Run command 'bundle install' to install gems
+  * 
 * Opening program
 
 ##How to Run RSpec Tests
+* Follow the steps in 'How to Run These Files' above
 * Run tests
 
 ##Using Commands in Rails Console

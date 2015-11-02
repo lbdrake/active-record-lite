@@ -5,7 +5,7 @@ ROOT_FOLDER = File.join(File.dirname(__FILE__), '..')
 WORLD_SQL_FILE = File.join(ROOT_FOLDER, 'world.sql')
 WORLD_DB_FILE = File.join(ROOT_FOLDER, 'world.db')
 
-class WorldDBConnection
+class DBConnection
   def self.open(db_file_name)
     @db = SQLite3::Database.new(db_file_name)
     @db.results_as_hash = true
