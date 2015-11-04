@@ -14,13 +14,10 @@ class SQLObject
       column_symbols << column_name.to_sym
     end
     column_symbols
-
-
   end
 
   def self.finalize!
     columns.each do |column_name|
-
       define_method(column_name) do
         attributes[column_name]
       end
@@ -74,13 +71,28 @@ class SQLObject
     end
   end
 
+  def self.find_by_code(code)
+    object = DBConnection.execute(<<-SQL, code)
+      SELECT
+        #{table_name}.*
+      FROM
+        #{table_name}
+      WHERE
+        code = ?
+    SQL
+    if object == []
+      nil
+    else
+      self.new(object.first)
+    end
+  end
+
   def initialize(params = {})
     params.each do |key, value|
       attribute = key.to_sym
       raise "unknown attribute '#{attribute}'" unless self.class.columns.include?(attribute)
       self.send("#{attribute}=", value)
     end
-
   end
 
   def attributes
