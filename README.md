@@ -16,7 +16,7 @@
 * Follow the steps in 'How to Run These Files' above
 * Enter 'rspec' to run tests
 
-##Opening program in Console
+##Running Program in Console
   * Enter 'irb' to test manually:
     * load 'lib/file_list.rb'
     * class Country < SQLObject
