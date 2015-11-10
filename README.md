@@ -13,7 +13,7 @@
   * Run command 'bundle install' to install gems
 
 ##How to Run RSpec Tests
-* Follow the steps in 'How to Run These Files' above ('exit' out of 'irb')
+* Follow the steps in 'How to Run These Files' above
 * Enter 'rspec' to run tests
 
 ##Opening program in Console
